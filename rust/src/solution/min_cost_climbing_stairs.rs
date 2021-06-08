@@ -5,11 +5,11 @@ pub struct Solution {}
 impl Solution {
     pub fn min_cost_climbing_stairs(cost: Vec<i32>) -> i32 {
         if cost.len() <= 2 {
-            return *cost.get(0).unwrap();
+            return cost[0];
         }
 
-        let mut cost_left = *cost.get(0).unwrap();
-        let mut cost_right = *cost.get(1).unwrap();
+        let mut cost_left = cost[0];
+        let mut cost_right = cost[1];
         let mut index = 2;
         loop {
             if let Some(x) = cost.get(index) {
