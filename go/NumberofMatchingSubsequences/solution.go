@@ -15,9 +15,10 @@ func numMatchingSubseq(s string, words []string) int {
 		i := 0
 		var c rune
 		prevIdx := -1
-		idxFound := false
+
 		for i, c = range word {
 			if idxs, ok := m[c]; ok {
+				idxFound := false
 				for _, idx := range idxs {
 					if idx > prevIdx {
 						prevIdx = idx
